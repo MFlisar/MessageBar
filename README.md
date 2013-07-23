@@ -9,7 +9,7 @@ MessageBar
 An Android Toast replacement, similar to the one seen in the GMail app.
 Multiple messages can be posted in succession and will be retained on screen rotation
 
-main functionality:
+main customizable functionality:
 
 * display duration
 * disposing mode (automatic, button click)
@@ -17,6 +17,11 @@ main functionality:
 * display left display time
 * extendable message typ
 * customizable message bar style
+
+Hint
+=====
+
+Study the examples, they should be quite self-explanatory :-)
 
 
 Usage
@@ -42,6 +47,16 @@ You can use this to use the message bar in a fragment, in a view, in an activity
 2. checkContainer... this will check the parent view and adjust it if necessary, meaning:
  * adding a propriete container around the view if neccessary
  * adding the message bar to the container if the container does not contain it already
+
+Using a custom message bar
+--------------------------
+
+Keep in mind, that a custom message bar needs to contain following 4 views (TextViews):
+
+        R.id.mbMessage
+        R.id.mbButton1
+        R.id.mbButton2
+        R.id.mbCountdown
 
 Showing a message
 -----------------
