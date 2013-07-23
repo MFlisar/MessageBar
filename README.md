@@ -9,10 +9,14 @@ MessageBar
 An Android Toast replacement, similar to the one seen in the GMail app.
 Multiple messages can be posted in succession and will be retained on screen rotation
 
-Customizable values:
-* showing duration
-* disposing mode(automatic, button click)
+main functionality:
+
+* display duration
+* disposing mode (automatic, button click)
 * without button or with one or two buttons
+* display left display time
+* extendable message typ
+* customizable message bar style
 
 
 Usage
