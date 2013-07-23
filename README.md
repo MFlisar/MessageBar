@@ -25,27 +25,35 @@ Usage
 Way 1:
 ------
 
-Extend your activity from the MessageBarActivity
+Extend your activity from the MessageBarActivity and use the default MessageBar
 
 Way 2:
 ------
 
+Create a message bar like following, calling the constructor with the parent view/activity as container:
+`MessageBar messageBar = new MessageBar(Activity container, boolean checkContainer);`
+`MessageBar messageBar = new MessageBar(Activity container, boolean checkContainer, int resMessageBar);`
+`MessageBar messageBar = new MessageBar(View container, boolean checkContainer);`
+`MessageBar messageBar = new MessageBar(View container, boolean checkContainer, int resMessageBar);`
 
-Way 3:
-------
+You can use this to use the message bar in a fragment, in a view, in an activity.... just everywhere
 
+1. container... is the parent, in which the message bar will be shown
+2. checkContainer... this will check the parent view and adjust it if necessary, meaning:
+ * adding a propriete container around the view if neccessary
+ * adding the message bar to the container if the container does not contain it already
 
 Showing a message
 -----------------
 
-A message is shown simple by calling Activity's `getMessageBar().show(Message)` function or by the messages `message.show(messageBar)` fucntion
+A message is shown simple by calling `mMessageBar.show(Message)` function or by the messages `message.show(mMessageBar)` fucntion
 
 
 Credits
 =======
 
  * Roman Nurik for creating the [example][1] this library is based on.
- * SimonVT for giving me the base idea and the starting code
+ * [SimonVT][2] for giving me the base idea and the starting code
 
 
 License
