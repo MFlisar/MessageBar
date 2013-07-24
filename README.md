@@ -9,7 +9,7 @@ MessageBar
 
 [[/screenshot.jpg]]
 
-An Android Toast replacement, similar to the one seen in the GMail app.
+An Android **Toast replacement, similar to the one seen in the GMail app**.
 Multiple messages can be posted in succession and will be retained on screen rotation
 
 main customizable functionality:
@@ -25,7 +25,7 @@ main customizable functionality:
 Hint
 =====
 
-Study the example, it should be quite self-explanatory :-)
+**Study the example, it should be quite self-explanatory :-)**
 
 
 Usage
