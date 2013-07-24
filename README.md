@@ -69,9 +69,8 @@ Have a look into the default resources to see more. The message bar will look fo
 Credits
 =======
 
- * Roman Nurik for creating the [example][1] this library is based on.
  * [SimonVT][2] for giving me the base idea and the starting code
-
+ * Roman Nurik for creating the [example][1] Simon's library is based on.
 
 License
 =======
