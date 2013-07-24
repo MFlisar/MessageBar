@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mbContainer"
+    style="@style/MessageBar.ContainerRelativeLayout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/MessageBar.InnerContainer"
+        android:orientation="horizontal" >
+		
+	        <TextView
+	            android:id="@+id/mbMessage"
+	            style="@style/MessageBar.Message" />
+	
+	        <TextView
+	            android:id="@+id/mbButton1"
+	            style="@style/MessageBar.Button" />
+	
+	        <TextView
+	            android:id="@+id/mbButton2"
+	            style="@style/MessageBar.Button" />
+        
+    </LinearLayout>
+
+</LinearLayout>
