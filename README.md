@@ -55,11 +55,14 @@ You can use this to use the message bar in a fragment, in a view, in an activity
 Using a custom message bar
 --------------------------
 
-Keep in mind, that a custom message bar needs to contain following 3 views (TextViews):
+Keep in mind, that a custom message bar needs to contain following 4 views:
 
-        R.id.mbMessage
-        R.id.mbButton1
-        R.id.mbButton2
+        R.id.mbContainer (ViewGroup)
+        R.id.mbMessage (TextView)
+        R.id.mbButton1 (TextView)
+        R.id.mbButton2 (TextView)
+        
+Have a look into the default resources to see more. The message bar will look for the above mentioned Views and adjusts their texts and visibility 
 
 Showing a message
 -----------------
