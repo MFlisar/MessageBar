@@ -7,17 +7,20 @@ I have to create the examples and look into github a little bit, because this wi
 MessageBar
 ==========
 
+[[/screenshot.jpg]]
+
 An Android Toast replacement, similar to the one seen in the GMail app.
 Multiple messages can be posted in succession and will be retained on screen rotation
 
 main customizable functionality:
 
+* can be added to every view and adjusts the parent automatically to be capable to display a non layout relevant message bar (floating view)
 * display duration
 * disposing mode (automatic, button click)
 * without button or with one or two buttons
-* display left display time
-* extendable message typ
+* display remaining display time
 * customizable message bar style
+* extended messages for convenience
 
 Hint
 =====
