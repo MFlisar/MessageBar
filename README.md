@@ -1,7 +1,7 @@
 INFO
 =========
 
-First release will come tomorrow evening... 24.07.2013
+First release today evening...
 I have to create the examples and look into github a little bit, because this will be my first commit here :-)
 
 MessageBar
