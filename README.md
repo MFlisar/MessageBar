@@ -31,13 +31,12 @@ Hint
 Usage
 =====
 
-Way 1:
-------
+#### Way 1:
 
-Extend your activity from the MessageBarActivity and use the default MessageBar
+Extend your activity from the MessageBarActivity and use the default MessageBar.
+Use `activity.getMessageBar()` to use the activities message bar
 
-Way 2:
-------
+#### Way 2:
 
 Create a message bar like following, calling the constructor with the parent view/activity as container:
 `MessageBar messageBar = new MessageBar(Activity container, boolean checkContainer);`
@@ -52,8 +51,7 @@ You can use this to use the message bar in a fragment, in a view, in an activity
  * adding a propriete container around the view if neccessary
  * adding the message bar to the container if the container does not contain it already
 
-Using a custom message bar
---------------------------
+#### Using a custom message bar
 
 Keep in mind, that a custom message bar needs to contain following 4 views:
 
