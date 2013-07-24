@@ -30,7 +30,7 @@ Usage
 ### Showing a message
 -----------------------------------------------
 
-A message is shown simply by calling `messageBar.show(message)` function or by the messages `message.show(messageBar)` fucntion
+A message is shown simply by calling `messageBar.show(message)` function or by the messages `message.show(messageBar)` function
 
 ### Creating an Activity/View with a message bar
 -----------------------------------------------
