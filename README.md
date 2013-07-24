@@ -21,7 +21,7 @@ main customizable functionality:
 Hint
 =====
 
-Study the examples, they should be quite self-explanatory :-)
+Study the example, it should be quite self-explanatory :-)
 
 
 Usage
