@@ -27,6 +27,8 @@ Hint
 
 **Study the example, it should be quite self-explanatory :-)**
 
+Everything you need is written in the example code as comments...
+
 
 Usage
 =====
