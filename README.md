@@ -1,13 +1,7 @@
-INFO
-=========
-
-First release today evening...
-I have to create the examples and look into github a little bit, because this will be my first commit here :-)
-
 MessageBar
 ==========
 
-[[/screenshot.jpg]]
+![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshot.jpg)
 
 An Android **Toast replacement, similar to the one seen in the GMail app**.
 Multiple messages can be posted in succession and will be retained on screen rotation
