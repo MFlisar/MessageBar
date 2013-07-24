@@ -31,6 +31,14 @@ Hint
 Usage
 =====
 
+### Showing a message
+-----------------------------------------------
+
+A message is shown simple by calling `messageBar.show(message)` function or by the messages `message.show(messageBar)` fucntion
+
+### Creating an Activity/View with a message bar
+-----------------------------------------------
+
 #### Way 1:
 
 Extend your activity from the MessageBarActivity and use the default MessageBar.
@@ -55,18 +63,12 @@ You can use this to use the message bar in a fragment, in a view, in an activity
 
 Keep in mind, that a custom message bar needs to contain following 4 views:
 
-        R.id.mbContainer (ViewGroup)
+    R.id.mbContainer (ViewGroup)
         R.id.mbMessage (TextView)
         R.id.mbButton1 (TextView)
         R.id.mbButton2 (TextView)
         
 Have a look into the default resources to see more. The message bar will look for the above mentioned Views and adjusts their texts and visibility 
-
-Showing a message
------------------
-
-A message is shown simple by calling `mMessageBar.show(Message)` function or by the messages `message.show(mMessageBar)` fucntion
-
 
 Credits
 =======
@@ -91,9 +93,6 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
 
  [1]: https://code.google.com/p/romannurik-code/source/browse/#git%2Fmisc%2Fundobar
  [2]: https://github.com/SimonVT
