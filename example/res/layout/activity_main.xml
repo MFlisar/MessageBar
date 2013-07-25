@@ -8,25 +8,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Press button to add a message to the queue" />
-
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
         android:background="#999999"
         android:orientation="vertical" >
 
-        <CheckBox
-            android:id="@+id/cb"
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="add messages to sub view (gray listview)" />
+            android:text="Press button to add a message to the queue (keep in mind that in this sample only the MAIN message bar retains it&apos;s state, not the one for the sub view - see code for more details...)" />
 
         <Button
             android:id="@+id/button1"
@@ -34,8 +27,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="add message" 
-            android:onClick="onClick"/>
+            android:onClick="onClick"
+            android:text="add message" />
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="add messages to sub view (gray listview)"
+            android:textSize="12dp" />
 
     </LinearLayout>
 
