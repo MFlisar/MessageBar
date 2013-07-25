@@ -4,7 +4,7 @@ MessageBar
 An Android **Toast replacement, similar to the one seen in the GMail app**.
 Multiple messages can be posted in succession and will be retained on screen rotation
 
-![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshot.jpg)
+![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/screenshot.jpg)
 
 **DEMO Available at Google Play (Link comming soon, waiting for availability)**
 
