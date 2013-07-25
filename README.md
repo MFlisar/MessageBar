@@ -6,6 +6,8 @@ Multiple messages can be posted in succession and will be retained on screen rot
 
 ![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshot.jpg)
 
+**DEMO Available at Google Play (Link comming soon, waiting for availability)**
+
 main customizable functionality:
 
 * can be added to every view and adjusts the parent automatically to be capable to display a non layout relevant message bar (floating view)
