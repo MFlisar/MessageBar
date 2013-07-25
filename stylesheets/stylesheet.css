@@ -253,11 +253,6 @@ form {
   padding: 20px;
 }
 
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
@@ -424,4 +419,106 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+/* Listen */
+
+ul
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul li
+{
+	background-image: url(sqpurple.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 14px;
+}
+
+div {
+  width: 500px;
+  margin: 10px
+}
+ 
+ol {
+  list-style-type: none;
+}
+ 
+ol li {
+  color: #000;
+  position: relative;
+  font: 20px;
+  margin-bottom: 20px;
+}
+ 
+li p {
+  font: 12px;
+  padding-left: 60px;
+  color: #555;
+}
+ 
+span {
+  position: absolute;
+}
+
+/* ----------*/
+/* Slideshow */
+/* ----------*/
+
+#slideshow {
+    float: right;
+	margin: 10px;
+	margin:0 auto;
+	width:340px;
+	height:500px;
+	background:#212121;
+	position:relative;
+}
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:260px;
+  height:500px;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+}
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:240px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+  height:500px;
+}
+
+/** 
+ * Slideshow controls style rules.
+ */
+.control {
+  display:block;
+  width:39px;
+  height:300px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl {
+  top:0;
+  left:0;
+  background:transparent url(img/control_left.jpg) no-repeat 0 center;
+  height: 100%;
+}
+#rightControl {
+  right:0;
+  top:0;
+  background:transparent url(img/control_right.jpg) no-repeat 0 center;
+  height: 100%;
+}
+
+#slideshow img{
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  max-width: 240px;
 }

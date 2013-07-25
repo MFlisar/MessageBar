@@ -9,6 +9,61 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Messagebar</title>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  var currentPosition = 0;
+		  var slideWidth = 560;
+		  var slides = $('.slide');
+		  var numberOfSlides = slides.length;
+
+		  // Remove scrollbar in JS
+		  $('#slidesContainer').css('overflow', 'hidden');
+
+		  // Wrap all .slides with #slideInner div
+		  slides
+			.wrapAll('<div id="slideInner"></div>')
+			// Float left to display horizontally, readjust .slides width
+			.css({
+			  'float' : 'left',
+			  'width' : slideWidth
+			});
+
+		  // Set #slideInner width equal to total width of all slides
+		  $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+		  // Insert controls in the DOM
+		  $('#slideshow')
+			.prepend('<span class="control" id="leftControl">Clicking moves left</span>')
+			.append('<span class="control" id="rightControl">Clicking moves right</span>');
+
+		  // Hide left arrow control on first load
+		  manageControls(currentPosition);
+
+		  // Create event listeners for .controls clicks
+		  $('.control')
+			.bind('click', function(){
+			// Determine new position
+			currentPosition = ($(this).attr('id')=='rightControl') ? currentPosition+1 : currentPosition-1;
+			
+			// Hide / show controls
+			manageControls(currentPosition);
+			// Move slideInner using margin-left
+			$('#slideInner').animate({
+			  'marginLeft' : slideWidth*(-currentPosition)
+			});
+		  });
+
+		  // manageControls: Hides and Shows controls depending on currentPosition
+		  function manageControls(position){
+			// Hide left arrow if position is first slide
+			if(position==0){ $('#leftControl').hide() } else{ $('#leftControl').show() }
+			// Hide right arrow if position is last slide
+			if(position==numberOfSlides-1){ $('#rightControl').hide() } else{ $('#rightControl').show() }
+		  }	
+		});
+  </script>
   </head>
 
   <body>
@@ -37,23 +92,50 @@
 <p>An Android <strong>Toast replacement, similar to the one seen in the GMail app</strong>.
 Multiple messages can be posted in succession and will be retained on screen rotation</p>
 
-<p><strong>DEMO</strong> can be download at <a href="https://play.google.com/store/apps/details?id=com.michaelflisar.messagebartest">Google Play</href></a></p>
+<center><p><strong>DEMO</strong> can be download at <a href="https://play.google.com/store/apps/details?id=com.michaelflisar.messagebartest">Google Play</href></a></p></center>
 
-<p><img src="https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/screenshot.jpg" alt="Screenshot"></p>
+	<div id="slideshow">
+		<div id="slidesContainer">
+		  <div class="slide">
+		   <img src="https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/Screenshot_2013-07-24-10-16-52.png" alt="Screenshot">
+		  </div>
+		  <div class="slide">
+		   <img src="https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/Screenshot_2013-07-24-10-16-57.png" alt="Screenshot">
+		  </div>
+		  <div class="slide">
+		   <img src="https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/Screenshot_2013-07-24-10-17-03.png" alt="Screenshot">
+		  </div>
+		  <div class="slide">
+			<img src="https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/Screenshot_2013-07-24-10-17-09.png" alt="Screenshot">
+		  </div>
+		  <div class="slide">
+			<img src="https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/Screenshot_2013-07-24-10-17-15.png" alt="Screenshot">
+		  </div>
+		</div>
+	</div>
+ 
+	<h4 class="underline">main customizable functionality</h4>
 
-<p>main customizable functionality:</p>
-
-<ul>
-<li>can be added to every view and adjusts the parent automatically to be capable to display a non layout relevant message bar (floating view)</li>
-<li>display duration</li>
-<li>disposing mode (automatic, button click)</li>
-<li>without button or with one or two buttons</li>
-<li>display remaining display time</li>
-<li>customizable message bar style</li>
-<li>extended messages for convenience</li>
-</ul>
-      </section>
+	<div>
+		<ol>
+			<li>can be added to every view and adjusts the parent automatically to be capable to display a non layout relevant message bar (floating view)</li>
+			<li>display duration</li>
+			<li>disposing mode (automatic, button click)</li>
+			<li>without button or with one or two buttons</li>
+			<li>display remaining display time</li>
+			<li>customizable message bar style</li>
+			<li>extended messages for convenience</li>
+		</ol>
+	</div>
+	
+	<br style="clear:both;">
+	
+    </section>
+	
+	
     </div>
+	
+	
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
