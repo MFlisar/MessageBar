@@ -6,7 +6,7 @@ Multiple messages can be posted in succession and will be retained on screen rot
 
 ![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/screenshot.jpg)
 
-**DEMO Available at Google Play (Link comming soon, waiting for availability)**
+**DEMO Available at [Google Play][3]**
 
 main customizable functionality:
 
@@ -93,3 +93,4 @@ License
 
  [1]: https://code.google.com/p/romannurik-code/source/browse/#git%2Fmisc%2Fundobar
  [2]: https://github.com/SimonVT
+ [3]: https://play.google.com/store/apps/details?id=com.michaelflisar.messagebartest
