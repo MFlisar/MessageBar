@@ -1,5 +1,5 @@
 
-package com.android.michaelflisar.messagebar;
+package com.michaelflisar.messagebar;
 
 import android.app.Activity;
 import android.os.Bundle;

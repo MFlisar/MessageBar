@@ -1,7 +1,7 @@
 
-package com.android.michaelflisar.messagebar.messages;
+package com.michaelflisar.messagebar.messages;
 
-import com.android.michaelflisar.messagebar.MessageBar;
+import com.michaelflisar.messagebar.MessageBar;
 
 import android.os.Parcel;
 import android.os.Parcelable;

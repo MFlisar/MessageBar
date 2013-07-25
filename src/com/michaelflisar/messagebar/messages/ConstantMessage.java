@@ -1,4 +1,4 @@
-package com.android.michaelflisar.messagebar.messages;
+package com.michaelflisar.messagebar.messages;
 
 public class ConstantMessage extends BaseMessage
 {

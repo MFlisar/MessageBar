@@ -1,5 +1,5 @@
 
-package com.android.michaelflisar.messagebar;
+package com.michaelflisar.messagebar;
 
 import java.util.LinkedList;
 
@@ -19,7 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.michaelflisar.messagebar.messages.BaseMessage;
+import com.michaelflisar.messagebar.messages.BaseMessage;
 
 public class MessageBar
 {

@@ -1,5 +1,5 @@
 
-package com.android.michaelflisar.messagebartest;
+package com.michaelflisar.messagebar.demo;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -7,13 +7,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.android.michaelflisar.messagebar.MessageBar;
-import com.android.michaelflisar.messagebar.MessageBarActivity;
-import com.android.michaelflisar.messagebar.messages.BaseMessage.OnMessageClickListener;
-import com.android.michaelflisar.messagebar.messages.BaseMessage;
-import com.android.michaelflisar.messagebar.messages.ConstantMessage;
-import com.android.michaelflisar.messagebar.messages.TextMessage;
-import com.android.michaelflisar.messagebar.messages.Timer2ButtonMessage;
+import com.michaelflisar.messagebar.MessageBar;
+import com.michaelflisar.messagebar.MessageBarActivity;
+import com.michaelflisar.messagebar.messages.BaseMessage;
+import com.michaelflisar.messagebar.messages.BaseMessage.OnMessageClickListener;
+import com.michaelflisar.messagebar.messages.ConstantMessage;
+import com.michaelflisar.messagebar.messages.TextMessage;
+import com.michaelflisar.messagebar.messages.Timer2ButtonMessage;
+import com.michaelflisar.messagebartest.R;
 
 public class MainActivity extends MessageBarActivity
 {
