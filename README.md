@@ -1,16 +1,10 @@
-INFO
-=========
-
-First release today evening...
-I have to create the examples and look into github a little bit, because this will be my first commit here :-)
-
 MessageBar
 ==========
 
-[[/screenshot.jpg]]
-
 An Android **Toast replacement, similar to the one seen in the GMail app**.
 Multiple messages can be posted in succession and will be retained on screen rotation
+
+![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshot.jpg)
 
 main customizable functionality:
 
@@ -36,7 +30,7 @@ Usage
 ### Showing a message
 -----------------------------------------------
 
-A message is shown simply by calling `messageBar.show(message)` function or by the messages `message.show(messageBar)` fucntion
+A message is shown simply by calling `messageBar.show(message)` function or by the messages `message.show(messageBar)` function
 
 ### Creating an Activity/View with a message bar
 -----------------------------------------------
@@ -75,9 +69,8 @@ Have a look into the default resources to see more. The message bar will look fo
 Credits
 =======
 
- * Roman Nurik for creating the [example][1] this library is based on.
  * [SimonVT][2] for giving me the base idea and the starting code
-
+ * Roman Nurik for creating the [example][1] Simon's library is based on.
 
 License
 =======
