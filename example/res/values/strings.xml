@@ -3,5 +3,6 @@
 
     <string name="app_name">MessageBarTest</string>
     <string name="action1">add all messages to queue again</string>
+    <string name="action2">Project at GitHub</string>
 
 </resources>

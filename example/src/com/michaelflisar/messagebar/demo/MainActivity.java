@@ -1,6 +1,8 @@
 
 package com.michaelflisar.messagebar.demo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.Menu;
@@ -109,6 +111,11 @@ public class MainActivity extends MessageBarActivity
         
         if (item.getItemId() == R.id.action1)
             addAll();
+        else if (item.getItemId() == R.id.action2)
+        {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://michaelflisar.github.io/MessageBar/"));
+            startActivity(browserIntent);
+        }
         
         return true;
         
