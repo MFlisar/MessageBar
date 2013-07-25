@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.michaelflisar.messagebar.MessageBar;
@@ -18,19 +21,26 @@ import com.michaelflisar.messagebar.messages.TextMessage;
 import com.michaelflisar.messagebar.messages.Timer2ButtonMessage;
 import com.michaelflisar.messagebartest.R;
 
-public class MainActivity extends MessageBarActivity
+public class MainActivity extends MessageBarActivity implements OnClickListener
 {
     // this message bar is not retained on screen rotation (see code of MessageBarActivity to see how this would be achieved)
     // short solution:
     // just call mExtraMessageBar.onRestoreInstanceState(bundle) and 
     // mExtraMessageBar.onSaveInstanceState(bundle) in the corresponding functions of this activity
     private MessageBar mExtraMessageBar = null;
+   
+    private OnMessageClickListener mListener = null;
+    
+    private CheckBox checkBox;
+    
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        checkBox = (CheckBox)findViewById(R.id.cb);
         
         // from here on you can use the message bar
         // the custom message classes are jsut for convenience...
@@ -43,57 +53,26 @@ public class MainActivity extends MessageBarActivity
         // if constructor for your message does not exist, you have following two possibilities:
         // 1) add the constructor and make a pull request
         // 2) create the message using the BaseMessage...
-                
-        if (savedInstanceState == null)
-        {
-            addAll();
-        }
-    }
-    
-    private void addAll()
-    {
-        // 1) creating some messages
-        TextMessage message1 = new TextMessage("text only");
-        TextMessage message2 = new TextMessage("single button", "ok", null);
-        TextMessage message3 = new TextMessage("single button with image", "ok", R.drawable.ic_launcher); 
-        TextMessage message4 = new TextMessage("double button message (with button listener)", "ok", "cancel");
         
-        Timer2ButtonMessage message5 = new Timer2ButtonMessage("single button with timer", "ok", null);
-        BaseMessage message6 = new BaseMessage("base message", null, -1, null, -1, 10000, true, null);
-        ConstantMessage message7 = new ConstantMessage("constant message", "dismiss");
-        
-        // 2) adding some button listeners
-        message4.setClickListener(new OnMessageClickListener()
+        mListener = new OnMessageClickListener()
         {   
             @Override
             public void onButton2Click(Parcelable data)
             {
-                Toast.makeText(MainActivity.this, "cancel pressed", 3000).show();
+                Toast.makeText(MainActivity.this, "button 1 pressed", 3000).show();
             }
             
             @Override
             public void onButton1Click(Parcelable data)
             {
-                Toast.makeText(MainActivity.this, "ok pressed", 3000).show();
+                Toast.makeText(MainActivity.this, "button 2 pressed", 3000).show();
             }
-        });
-
-        // 3) adding all messages to the message bar queue (showing both ways to do it)
-        message1.show(getMessageBar());
-        message2.show(getMessageBar());
-        
-        getMessageBar().show(message3);
-        getMessageBar().show(message4);
-        getMessageBar().show(message5);
-        getMessageBar().show(message6);
-        
-        getExtraMessageBar().show(message7);
+        };
     }
-    
     private MessageBar getExtraMessageBar()
     {
         if (mExtraMessageBar == null)
-            mExtraMessageBar = new MessageBar(findViewById(R.id.testTextViewContainer), true);
+            mExtraMessageBar = new MessageBar(findViewById(R.id.linearLayout1), true);
         
         return mExtraMessageBar;
     }
@@ -109,15 +88,57 @@ public class MainActivity extends MessageBarActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         
-        if (item.getItemId() == R.id.action1)
-            addAll();
-        else if (item.getItemId() == R.id.action2)
+        if (item.getItemId() == R.id.link)
         {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://michaelflisar.github.io/MessageBar/"));
             startActivity(browserIntent);
         }
+        else if (item.getItemId() == R.id.clear)
+        {
+            getMessageBar().clear();
+            getExtraMessageBar().clear();
+        }
+        return true;   
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        BaseMessage message = null;
+        MessageBar mb = checkBox.isChecked() ? getExtraMessageBar() : getMessageBar();
         
-        return true;
+        if (v.getId() == R.id.button1)
+        {
+            message = new TextMessage("text only");
+        }
+        else if (v.getId() == R.id.button2)
+        {
+            message = new TextMessage("single button", "ok", null);
+        }
+        else if (v.getId() == R.id.button3)
+        {
+            message = new TextMessage("single button", "ok", R.drawable.ic_launcher); 
+        }
+        else if (v.getId() == R.id.button4)
+        {
+            message = new TextMessage("double button (with listener)", "yes", "no");
+            message.setClickListener(mListener);
+        }
+        else if (v.getId() == R.id.button5)
+        {
+            message = new ConstantMessage("constant message", "dismiss");
+        }
+        else if (v.getId() == R.id.button6)
+        {
+            message = new Timer2ButtonMessage("text with timer", "ok", null);
+        }
+        
+        if (message != null)
+        {
+            message.show(mb);
+            // alternatively:
+            // mb.show(message);
+        }
         
     }
 

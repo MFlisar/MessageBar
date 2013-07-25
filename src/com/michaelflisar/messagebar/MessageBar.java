@@ -286,6 +286,7 @@ public class MessageBar
 
     public void clear()
     {
+        mHandler.removeCallbacksAndMessages(null);
         if (mTimer != null)
             mTimer.cancel();
         mMessages.clear();
