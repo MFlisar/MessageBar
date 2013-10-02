@@ -1,22 +1,7 @@
 MessageBar
 ==========
 
-An Android **Toast replacement, similar to the one seen in the GMail app**.
-Multiple messages can be posted in succession and will be retained on screen rotation
-
-![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/screenshot.jpg)
-
-**DEMO Available at [Google Play][3]**
-
-main customizable functionality:
-
-* can be added to every view and adjusts the parent automatically to be capable to display a non layout relevant message bar (floating view)
-* display duration
-* disposing mode (automatic, button click)
-* without button or with one or two buttons
-* display remaining display time
-* customizable message bar style
-* extended messages for convenience
+Screenshots and description can be found here: http://www.michaelflisar.com/message-bar/
 
 Hint
 =====
