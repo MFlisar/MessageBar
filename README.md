@@ -1,7 +1,7 @@
 MessageBar
 ==========
 
-Screenshots and description can be found here: http://www.michaelflisar.com/message-bar/
+**Screenshots** and **description** can be found at http://www.michaelflisar.com/message-bar/
 
 Hint
 =====
