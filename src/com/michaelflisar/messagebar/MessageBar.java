@@ -252,17 +252,17 @@ public class MessageBar
                 public void onFinish()
                 {
                     mHideRunnable.run();
-                    mTextView.setText(message.getMessage() + " (" + String.valueOf(0) + ")");           
+                    mTextView.setText(message.getMessage() + " (" + String.valueOf(0) + ")");
                 }
             };
         }
 
         mButton1.setVisibility(message.getButton1Text() != null ? View.VISIBLE : View.GONE);
         mButton2.setVisibility(message.getButton2Text() != null ? View.VISIBLE : View.GONE);
-        
+
         // TODO: this should not be done, when custom message bar resource is used...
         mTextView.setGravity((message.getButton1Text() != null || message.getButton2Text() != null) ? Gravity.LEFT | Gravity.CENTER_VERTICAL : Gravity.CENTER);
-        
+
         if (immediately)
             mFadeInAnimation.setDuration(0);
         else
