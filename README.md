@@ -1,72 +1,7 @@
 MessageBar
 ==========
 
-An Android **Toast replacement, similar to the one seen in the GMail app**.
-Multiple messages can be posted in succession and will be retained on screen rotation
-
-![Screenshot](https://raw.github.com/MichaelFlisar/MessageBar/master/screenshots/screenshot.jpg)
-
-**DEMO Available at [Google Play][3]**
-
-main customizable functionality:
-
-* can be added to every view and adjusts the parent automatically to be capable to display a non layout relevant message bar (floating view)
-* display duration
-* disposing mode (automatic, button click)
-* without button or with one or two buttons
-* display remaining display time
-* customizable message bar style
-* extended messages for convenience
-
-Hint
-=====
-
-**Study the example, it should be quite self-explanatory :-)**
-
-Everything you need is written in the example code as comments...
-
-
-Usage
-=====
-
-### Showing a message
------------------------------------------------
-
-A message is shown simply by calling `messageBar.show(message)` function or by the messages `message.show(messageBar)` function
-
-### Creating an Activity/View with a message bar
------------------------------------------------
-
-#### Way 1:
-
-Extend your activity from the MessageBarActivity and use the default MessageBar.
-Use `activity.getMessageBar()` to use the activities message bar
-
-#### Way 2:
-
-Create a message bar like following, calling the constructor with the parent view/activity as container:
-`MessageBar messageBar = new MessageBar(Activity container, boolean checkContainer);`
-`MessageBar messageBar = new MessageBar(Activity container, boolean checkContainer, int resMessageBar);`
-`MessageBar messageBar = new MessageBar(View container, boolean checkContainer);`
-`MessageBar messageBar = new MessageBar(View container, boolean checkContainer, int resMessageBar);`
-
-You can use this to use the message bar in a fragment, in a view, in an activity.... just everywhere
-
-1. container... is the parent, in which the message bar will be shown
-2. checkContainer... this will check the parent view and adjust it if necessary, meaning:
- * adding a propriete container around the view if neccessary
- * adding the message bar to the container if the container does not contain it already
-
-#### Using a custom message bar
-
-Keep in mind, that a custom message bar needs to contain following 4 views:
-
-    R.id.mbContainer (ViewGroup)
-        R.id.mbMessage (TextView)
-        R.id.mbButton1 (TextView)
-        R.id.mbButton2 (TextView)
-        
-Have a look into the default resources to see more. The message bar will look for the above mentioned Views and adjusts their texts and visibility 
+**Screenshots**, **description** and **usage** can be found at http://www.michaelflisar.com/message-bar/
 
 Credits
 =======
