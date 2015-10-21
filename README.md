@@ -1,7 +1,9 @@
+DEPRECATED - Project no longer maintained
+
 MessageBar
 ==========
 
-**Screenshots**, **description** and **usage** can be found at http://www.michaelflisar.com/message-bar/
+**Demo** https://play.google.com/store/apps/details?id=com.michaelflisar.messagebartest
 
 Credits
 =======
